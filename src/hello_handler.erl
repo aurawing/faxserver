@@ -15,8 +15,8 @@
 init({tcp, http},Req, Opts) ->
   lager:info("receive request!"),
   {ok, Req2} = cowboy_req:reply(200,
-    [{<<"content-type">>, <<"text/plain">>}],
-    <<"你好，Erlang!">>,
+    [{<<"content-type">>, <<"text/plain; charset=utf-8">>}],
+    unicode:characters_to_binary("你好，Erlang!"),
     Req),
   {shutdown, Req2, Opts}.
 

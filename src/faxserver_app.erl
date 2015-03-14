@@ -18,7 +18,8 @@ start(_StartType, _StartArgs) ->
     Dispatch = cowboy_router:compile([
       {'_', [
         {"/", hello_handler, []},
-        {"/fax/[:id]", fax_handler, [{auth, Auth}, {basepath, BasePath}]},
+        {"/fax/send", fax_send_handler, [{auth, Auth}, {basepath, BasePath}]},
+        {"/fax/[:id]", fax_status_handler, [{auth, Auth}, {basepath, BasePath}]},
         {"/static/[...]", cowboy_static, {priv_dir, faxserver, "static"}}
       ]}
     ]),

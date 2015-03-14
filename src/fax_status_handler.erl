@@ -6,7 +6,7 @@
 %%% @end
 %%% Created : 01. 三月 2015 21:52
 %%%-------------------------------------------------------------------
--module(fax_handler).
+-module(fax_status_handler).
 -author("xu").
 
 %% API
