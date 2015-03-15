@@ -2,8 +2,8 @@
 
 ## Compile
 ```bash
-  $> rebar get-deps
-  $> rebar clean compile
+  $ rebar get-deps
+  $ rebar clean compile
 ```
 
 ## Start
